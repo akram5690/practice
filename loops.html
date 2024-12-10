@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+// make a pyramid shape use for loop
+
+let j, k, l ,m;
+
+// 1) initialization : 2)condition : 3)incremen/decrement
+
+for(j=1; j<=5; j++){   //q++ will plus one from the until the condition of the queue is false
+    
+    for(l=1; l<=5-j; l++){    //First we will minus the value of j from 5 then it will print further
+
+        document.write("&nbsp; &nbsp;");  //&nbsp takes half the space of * so use two &nbsp
+    }
+    
+    for(k=1; k<=j; k++){
+                                        // Use + " " for extra space
+        document.write("*"+ " ")
+    }
+    
+    for(m=2; m<=j; m++){         //1 will not print, later the value of j will be printed
+        document.write("*"+ " ");
+    }
+    document.write("<br/>")
+}
+document.write("<br/>")
+document.write("<br/>")
+
+
+// make a dimond shape use for loop
+
+let a,s,d,f;
+
+        let z,x,c,v;
+
+        for(a=1; a<=5; a++){
+
+            for(d=1; d<=5-a; d++){
+                document.write("&nbsp; &nbsp");
+            }
+
+            for(s=1; s<=a; s++){
+                document.write("*"+ " ");
+            }
+
+            for(f=2; f<=a; f++){
+                document.write("*"+ " ")
+            }
+
+            
+            for(z=1; z<=2; z++){
+
+                for(c=1; c<=5-z; c++){
+                    document.write("&nbsp;&nbsp")
+                }
+
+                for(x=1; x<=z; x++){
+                    document.write("*"+ " ")
+                }
+            }
+            document.write("<br>")
+        }
+
+        let q,w,e,r;
+
+        for(q=4; q>=1; q--){ //q-- will minus one from the until the condition of the queue is false
+
+            for(e=0; e<=4-q; e++){
+                document.write("&nbsp; &nbsp");
+            }
+
+            for(w=1; w<=q; w++){
+                document.write("*"+ " ");
+            }
+
+            for(r=2; r<=q; r++){
+                document.write("*"+ " ")
+            }
+            document.write("<br>");
+
+            
+            
+        }   
+
+
+
+        let g, n, b, p;
+
+        for(g=1; g<=5; g++){
+
+            for(b=1; b<=5-g; b++){
+                document.write("&nbsp; &nbsp");
+            }
+
+            for(n=1; n<=g; n++){
+                document.write("*" + " ");
+            }
+
+            for(p=2; p<=g; p++){
+                document.write("*" + " ");
+            }
+            document.write("<br/>");
+        }
+
+
+        for(g=4; g>=1; g--){
+
+            for(b=0; b<=4-g; b++){
+                document.write("&nbsp; &nbsp");
+            }
+
+            for(n=1; n<=g; n++){
+                document.write("*" + " ");
+            }
+
+            for(p=2; p<=g; p++){
+                document.write("*" + " ");
+            }
+            document.write("<br>");
+        }
+
+
+        for(a=1; a<=10; a++){
+
+            for(d=1; d<=10-a; d++){
+                document.write("&nbsp; &nbsp");
+            }
+
+            for(s=1; s<=a; s++){
+                document.write("*"+ " ");
+            }
+
+            for(f=2; f<=a; f++){
+                document.write("*"+ " ");
+            }
+            document.write("<br>");
+        }
+
+
+        for(a=9; a>=1; a--){
+
+            for(d=0; d<=9-a; d++){
+                document.write("&nbsp; &nbsp");
+            }
+
+            for(s=4; s<=a; s++){
+                for(f=7; f>=2-a; f--){
+                document.write("*" +" ");
+            }
+            document.write("*" +" ");
+        }
+        document.write("<br>")
+
+            for(f=2; f<=a; f++){
+                document.write("*" +" ");
+            }
+            document.write("<br>");
+        }
+
+        
+
+        
+    </script>
+</body>
+</html>

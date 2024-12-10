@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li::marker {
+            content: "😍";
+        }
+
+        span {
+            cursor: pointer;
+            color: red;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="todo">
+        <button onclick="return setElement()">Add Todo's</button>
+    </div>
+
+    <ul id="list">
+        <li>My list <span onclick="removeElement(this)">&Cross;</span></li>
+    </ul>
+
+    <script>
+        function setElement() {
+            let li = document.createElement("li");
+            let inp = document.getElementById("todo").value;
+            let text = document.createTextNode(inp);
+            li.appendChild(text);
+
+            // Create the delete span element
+            let span = document.createElement("span");
+            span.innerHTML = "&Cross;";
+            span.onclick = function () { removeElement(span); };
+            li.appendChild(span);
+
+            // Append the list item to the list
+            let mylist = document.getElementById("list")
+            mylist.appendChild(li);
+
+            // Clear the input
+            document.getElementById("todo").value = "";
+        }
+
+        function removeElement(element) {
+            let li = element.parentElement;
+            li.remove();
+        }
+    </script>
+</body>
+
+</html>

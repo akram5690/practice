@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showMsg()">click</button>
+
+   <button onclick="openlink()">Open</button>
+   <button onclick="closelink()">Close</button>
+    <script>
+
+        var newlink = "https://www.youtube.com/" ;
+        var link ;
+        function openlink(){
+           link = window.open(newlink, " ", "width=650px, height=650px, left=400px, top=80px");
+        }
+        function closelink() {
+            link.window.close();
+        }
+
+        function showMsg() {
+            if (confirm("click to show Percentage")) {
+                document.write(per)
+            } else {
+                document.write("false")
+            }
+        }
+
+        let per = prompt("enter your persenteg")
+
+        if (per >= 80 && per <= 100) {
+            document.write("you are 1st");
+        }
+        else if (per >= 60 && per <= 80) {
+            document.write("you are 2nd");
+        }
+        else if (per >= 40 && per <= 60) {
+            document.write("you are therd");
+        }
+        else if (per <= 33) {
+            document.write("you are fail");
+        }
+        else {
+            document.write("enter valid persenteg");
+        }
+        document.write("<br>");
+
+
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            width: 100%;
+            height: 9vh;
+            background: linear-gradient(rgb(0, 0, 0),rgb(118, 10, 10));
+        }
+        .navbar div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .navbar h1{
+            margin: 25px;
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+        }
+        .navbar .list ul{
+            margin: 25px;
+            width: 900px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar .list ul li{
+            list-style: none;
+        }
+        .navbar .list ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <h1>logo</h1>
+            <div class="list">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">service</a></li>
+                    <li><a href="#">contect</a></li>
+                    <li><a href="#">help</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>    
+
+        <script>
+        // document.write("hello world"); 
+        document.write(`<i><b>hello world</b></i>`); //html tag in js
+        document.write("<br>")
+
+        //decler variabals
+        var a = ("hello tourist");
+        var b = (100.25)
+        a = ("hello tour");  //variabel overright vellu        
+        document.write(b);
+        document.write(a);
+        document.write("<br>")
+        
+        // decler multypal variabels
+        var name , age
+        name = "akram";
+        age = 26;
+        document.write(name , age)
+        document.write("<br>")
+        
+        //let propertie ; do not decler second time variabal in let propertie
+        
+        let firstname = "akram";
+        //let firtname = "rahul"; rong veriabel
+        firstname = "rahul";  //right
+        
+        document.write(firstname);
+        document.write("<br>")
+        
+        //constent variabel ; do not over right variabel
+        
+        const second = "world";
+        //second = "hello"; rong
+        //const second = "hello"; rong 
+        
+        document.write(second)
+        document.write("<br>")
+
+
+        //arthmatic opreter
+        var a = 2;
+        var b = 3;
+        var c = a + b;
+        //var c = a * b;
+        //var c = a - b;
+        //var c = a % b;
+        //var c = a / b;
+        //var c = a ** b;   
+        document.write(c);
+
+        document.write(`<br>`);
+        
+       a--; /*decrement veliu*/ document.write(a+b);
+       document.write("<br>")
+       a++; /*increment veliu*/ document.write(a+b);
+
+
+       //assiment opretor
+       /*var a = 2;
+        var b = 3;
+       a -= b;    ans=-1
+       a *= b;    ans=6
+       document.write(a);*/   
+
+
+       /*if stetment is true or fals condition
+       if stetment is true condition is print and stetment fals consition not print*/
+
+       /*else stetment if is fals else condition is run*/
+       
+       var name = "akram";
+       var name2 = "sana";
+       var gender = "male";
+    //    var gender = "female"; print else condition  
+
+       if(gender == "male"){
+        document.write("hello mr." + name)
+       }
+       else{
+        document.write("hello miss." + name2)
+       }
+       document.write("<br>")
+
+       //if else if condition
+
+       var per = 70;
+
+       if(per >= 80 && per <= 100){
+        document.write("you are in merit.");
+       }
+       else if(per >= 60 && per < 80){
+        document.write("you are in Ist divison.");
+       }
+       else if(per >= 45 && per < 60){
+        document.write("you are in IInd divison.");
+       }
+       else if(per >= 33 && per < 45){
+        document.write("you are in IIIrd divison.");
+       }
+       else if(per < 33){
+        document.write("you are fail.");
+       }
+       else {
+        document.write("please enter valid percentege");
+       }
+
+       document.write("<br>")
+
+
+       //conditional ternary opretor
+       var a = 400;
+       var b;
+       (a > 10) ? b = "true" : b = "false";
+       document.write(b);
+       document.write("<br>")
+
+
+
+    //    switch statement : similer like if else if condition
+       var day = 5;
+
+       switch (day) {
+        case 0:
+            document.write("today is monday");            
+            break; 
+        case 1:
+            document.write("today is tuesday");            
+            break;
+        case 2:
+            document.write("today is wednesday");            
+            break; 
+        case 3:
+            document.write("today is thursday");            
+            break; 
+        case 4:
+            document.write("today is friday");            
+            break; 
+        case 5:
+            document.write("today is saturday");            
+            break;
+        case 6:
+            document.write("today is sunday");            
+            break;      
+       
+        default:
+            document.write("enter the valid week day.")
+            break;
+       }
+       document.write("<br>")
+
+
+    //    exp 2
+       
+    var age = 15;
+
+    switch (true) {
+        case (age >= 15 && age<= 20):
+            document.write("you are eligible");
+            break;
+    case (age >= 21 && age<= 30):
+            document.write("you are not eligible");
+            break;
+    
+        default:
+            document.write("enter the valid age.");
+            break;
+    }
+    document.write("<br>")
+
+
+
+    // alert box
+
+    var a = 10;
+    var b = 20;
+
+    if(a > b){
+        alert("value of A : " + a);
+    }
+    else{
+        alert("value of B : " + b);
+    }
+
+    // alert box exp 2
+
+    var vijay = 45;
+
+    if(vijay >=40 && vijay <=50){
+        alert("you are first");
+    }
+    else if(vijay >=30 && vijay <=40){
+        alert("you are second");
+    }
+    else if(vijay >=20 && vijay <=30){
+        alert("you are thired");
+    }
+    else if(vijay < 20){
+        alert("fail");
+    }
+    else{
+        alert("enter valid marks")
+    }
+    document.write("<br>")
+
+    // confirm box
+
+    var a = confirm("do you like page ?")
+
+    if(a){
+        alert("thanks");
+    }
+    else{
+        alert("sorry");
+    }
+    document.write("<br>")
+
+
+    // prompt box
+
+    var persent = prompt("enter your persenteg ?")
+
+    if(persent >= 80 && persent <= 100){
+        document.write("you are in merit.");
+       }
+       else if(persent >= 60 && persent < 80){
+        document.write("you are in Ist divison.");
+       }
+       else if(persent >= 45 && persent < 60){
+        document.write("you are in IInd divison.");
+       }
+       else if(persent >= 33 && persent < 45){
+        document.write("you are in IIIrd divison.");
+       }
+       else if(persent < 33){
+        document.write("you are fail.");
+       }
+       else {
+        document.write("please enter valid percentege");
+       }
+
+       document.write("<br>")
+
+
+    //    function syntex
+
+    function hello55(){
+        document.write("shaikh akram");
+    }
+
+    hello55();
+
+    document.write("<br>");
+
+
+    //   function whith perameter
+
+    function sum(a , b){
+        document.write(a + b + "<br>");
+    }
+    sum(20 , 10);
+    
+    sum(50 , 10);
+    
+    sum(15 , 33)
+
+    function fname(firstname ="akram" , lastname ="shaikh"){
+        document.write("hello" + " " + firstname + " " + lastname + "<br>");
+    }
+
+    fname();
+    fname("akib" , "shaikh");
+    fname("javed" , "khan");
+
+    document.write("<br");
+   
+    // function return
+
+    function fulln(finame , laname){
+        var les = finame +" "+ laname;
+
+        return les;
+    }
+
+    var xyz = fulln("naved" ,"pathan");
+    document.write(xyz);
+
+     // loop function
+
+     var jack = 1;
+
+     while(jack <= 10){
+        document.write("hello jack");
+        jack = jack + 1;
+     }
+
+
+       
+
+    </script>
+        
+    
+</body>
+</html>
