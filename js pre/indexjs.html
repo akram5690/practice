@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 5vh;
+        }
+
+        nav {
+            width: 100%;
+            height: 5vh;
+            background-color: bisque;
+        }
+
+        ul {
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        li {
+            cursor: pointer;
+            list-style: none;
+            text-transform: uppercase;
+        }
+
+        li button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <h1>logo</h1>
+                </li>
+                <li onclick="name()">name</li>
+                <li>about</li>
+                <li>service</li>
+                <li>help</li>
+                <li><input type="text"><button>search</button></li>
+                <li>cart</li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <script>
+
+        function name() {
+            document.write("shaikh akram");
+        }
+
+        name();
+        document.write("<br>");
+
+        var a = "limbayat ratanji nagar";
+
+        function add() {
+            document.write(a);
+        }
+        add();
+
+        document.write("<br>")
+
+        var per = prompt("enter your persenteg")
+
+        if (per >= 80 && per <= 100) {
+            document.write("you are 1st");
+        }
+        else if (per >= 60 && per <= 80) {
+            document.write("you are 2nd");
+        }
+        else if (per >= 40 && per <= 33) {
+            document.write("you are therd");
+        }
+        else if (per <= 33) {
+            document.write("you are fail");
+        }
+        else {
+            document.write("enter valid persenteg");
+        }
+        document.write("<br>");
+
+
+        function fullname11(firname = "akram", lasname = "shaikh") {
+            var a = firname + " " + lasname;
+
+            return a;
+        }
+
+        var fn = fullname11("naved", "shaikh");
+        document.write(fn);
+
+
+        // loop function : loop is divided in 3 part
+        // 1) initialization : 2)condition : 3)incremen/decrement
+
+        //while loop : while loop check all 3 conditions
+
+        //increment stetment :
+        var jack = 1;
+
+        while (jack <= 5) {
+            document.write("hello jack<br>");
+            jack = jack + 1;
+        }
+
+        var jac = 5;
+
+        //decrement stetment :       
+        while (jac >= 1) {
+            document.write(jac + ") hello jack<br>");
+            jac = jac - 1;
+        }
+
+
+
+
+        // do/while loop : first time not check  
+        // initialization and direct check increment/decrement 
+        // second time check all 3 condition
+
+        var rex = 1;
+
+        do {
+            document.write(rex + ") hello rex<br>");  // add counting var +
+            rex++;  //sort form increment : rex--; sort form decrement 
+        } while (rex <= 5);
+
+
+        //for loop : 3 stetment in 1 line
+
+        for (var lina = 1; lina <= 5; lina++) {
+            document.write("hello lina<br>");
+        }
+
+
+        // nested loop
+        for (var x = 1; x <= 100; x = x + 10) {
+            for (var y = x; y < x + 10; y++) {
+                document.write(y + " ");
+            }
+            document.write("<br> <hr>");
+        }
+
+        document.write("<br>");
+
+        // example 2
+        for (var c = 1; c <= 5; c++) {
+            for (var v = 1; v <= c; v++) {
+                document.write(v + " ");
+            }
+            document.write("<br> <hr>");
+        }
+
+
+    </script>
+
+</body>
+
+</html>
